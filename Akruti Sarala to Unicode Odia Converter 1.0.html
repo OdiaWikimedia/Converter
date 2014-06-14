@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Manoj Sahukar">
+<meta name=Description content=Akruti-Sarala99 - Unicode Converter>
+<meta name=Author1 content=Manoj Sahukar>
+<meta name=Author2 content=Subhasish Panigrahi>
+<title>Akruti-Sarala99 - Unicode Converter</title>
+
+<style>
+
+
+</style>
+
+<script  type="text/javascript">
+
+function convert_to_unicode()
+{
+
+var array_one = new Array(
+
+"û" , "ା" ,
+"£" , "୍ମ" ,
+"à" , "୍ମ" ,
+"á" , "୍ମୃ" ,
+"â" , "୍ର" ,
+"ã" , "୍ର" ,
+"ä" , "୍ଲ" ,
+"å" , "୍ଭ" ,
+"æ" , "୍ଳ" ,
+"ç" , "୍ୱ" , // ba phala
+"è" , "୍ସ" , 
+"ý", "୍ୟ" , // ja phala
+"¥", "୍ୟ" ,
+"ó", "ିଁ" ,
+
+"Iß" , "ୱ",
+
+"û" , "ା" ,
+"ò" , "ି" ,
+"ú" , "ୀ" ,
+"ê" , "ୁ" ,
+"ë" , "ୁ" ,
+"ì" , "ୂ" ,
+"í" ,  "ୂ" ,
+"é" , "ୃ" ,
+"ö" , " ।" ,
+
+"ñ", "ଁ" ,
+"õ", "ଂ" ,
+"ü", "ଃ" ,
+"þ", "୍" ,
+"¨", "୍‍" ,
+
+"1" , "୧" ,
+"2" , "୨" ,
+"3" , "୩" ,
+"4" , "୪" ,
+"5" , "୫" ,
+"6" , "୬" ,
+"7" , "୭" ,
+"8" , "୮" ,
+"9" , "୯" ,
+"0" , "୦" ,
+"#" , "୰" ,
+"$" , "ଽ" ,
+"&" , "ଌ" ,
+"*" , "ଞ୍ଚ" ,
+
+"Wÿ" , "ଡ଼" ,
+"Xÿ" , "ଢ଼" ,
+"[ô" , "ଥି" , 
+"]ô" , "ଧି" ,
+"Lô" , "ଖି" ,
+
+"î" , "୍ରୁ" ,
+"ï" , "୍ରୂ" ,
+
+"Ð" , "କ୍ଷ୍ଣ" ,
+"Ñ" , "୍କ" ,
+"Ò" , "୍ଖ" ,
+"Ó" , "୍ଗ" ,
+"Ô" , "୍ଚ" ,
+"Õ" , "୍ଜ" ,
+"Ö" , "୍ଟ" ,
+"×" , "୍ଠ" ,
+"Ø" , "୍ଡ" ,
+"Ù" , "୍ଣ" ,
+"Ú" , "୍ଥ" ,
+"Û" , "୍ଧ" ,
+"Ü" , "୍ନ" ,
+"Ý" , "୍ପ" ,
+"Þ" , "୍ଫ" ,
+"ß" , "୍ବ" ,
+
+"<" , "ଣ୍ଟ" ,
+"…" , "ଟ୍ଟ" ,
+"μ" , "ମ୍ପ" ,
+"µ" , "ମ୍ପ" ,
+"‰" , "ଣ୍ଣ" ,
+"Š" , "ଣ୍ଡ" ,
+
+"Œ" , "ଣ୍ଠ" ,
+"™" , "ତ୍ମ" ,
+"š" , "ତ୍ପ" ,
+"›" , "ତ୍ସ" ,
+"œ" , "ତ୍ସ୍ନ" ,
+"Ÿ" , "ଦ୍ଧ" ,
+
+
+"{" , "ଜ୍ଜ" ,
+"|" , "ଜ୍ଝ" ,
+"}" , "କ୍ର" ,
+
+"¡" , "ଦ୍ଧ" ,
+"¢" , "ଦ୍ଘ" ,
+"¤" , "ଧ୍ଯ" ,
+"¦" , "ନ୍ଦ" ,
+"§" , "ନ୍ଧ" ,
+"©" , "ତ୍ତ" ,
+"ª" , "ନ୍ତ୍ର" ,
+"«" , "ନ୍ତ" ,
+"¬" , "ଞ୍ଜ" ,
+"ƒ" , "ଞ୍ଝ" ,
+"®" , "ପ୍ପ" ,
+"¯" , "ପ୍ତ" ,
+
+"°", "ପ୍ସ" ,
+"±" , "ବ୍ଦ" ,
+"²" , "ବ୍ଧ" ,
+"´" , "ମ୍ବ" ,
+"¸" , "ମ୍ଭ" ,
+"¹" , "ମ୍ମ" ,
+"º" , "ଲ୍କ" ,
+"»" , "ଲ୍ଗ" ,
+"¼" , "ଶ୍ଛ" ,
+"½" , "ଶ୍ଚ" ,
+"¾" , "ଷ୍ଣ" ,
+"¿" , "ଷ୍ପ" ,
+
+"À" , "ଷ୍ଫ" ,
+"Á" , "ଷ୍ଟ" ,
+"Â" , "ଷ୍ଠ" ,
+"Ã" , "ଷ୍କ" ,
+"Ä" , "ସ୍କ" ,
+"Å" , "ସ୍ଖ" ,
+"Æ" , "ସ୍ପ" ,
+"Ç" , "ସ୍ଫ" ,
+"È" , "ସ୍ତ୍ର" ,
+"É" , "ସ୍ତ" ,
+"Ê" , "ସ୍ବ" ,
+"Ë" , "ଳ୍କ" ,
+"Ì" , "ଳ୍ପ" ,
+"Í" , "ଳ୍ଫ" ,
+"Î" , "ତ୍ଥ" ,
+"Ï" , "ଳ୍ଳ" ,
+
+"@ା" , "ଆ" ,
+"@" , "ଅ" ,
+"A" , "ଇ" ,
+"B" , "ଈ" ,
+"C" , "ଉ" ,
+"D" , "ଊ" ,
+"E" , "ଋ" ,
+"F" , "ୠ" ,
+"G" , "ଏ" ,
+"H" , "ଐ" ,
+"I" , "ଓ" ,
+"J" , "ଔ" ,  
+
+"K" , "କ" ,
+"L" , "ଖ" ,
+"M" , "ଗ" ,
+"N" , "ଘ" ,
+"O" , "ଙ" ,
+
+"P" , "ଚ",
+"Q" , "ଛ",
+"R" , "ଜ",
+"S" , "ଝ",
+"T" , "ଞ",
+
+"U", "ଟ" ,
+"V", "ଠ" ,
+"W", "ଡ" ,
+"X", "ଢ" ,
+"Y", "ଣ" ,
+"Z" , "ତ" ,
+"[" , "ଥ" ,
+"\\" , "ଦ" ,
+"]" , "ଧ" ,
+"^", "ନ" ,
+"~" , "ଯ" ,
+"_" , "ପ",
+"`" , "ଫ",
+"a" , "ବ",
+"b" , "ଭ",
+"c" , "ମ",
+"d" , "ୟ" ,
+"e" , "ର" ,
+"f" , "ଲ" ,
+"g" , "ଶ" ,
+"h" , "ଷ" ,
+"i" , "ସ" ,
+"j" , "ହ" ,
+"k" , "ଳ" ,
+"l" , "କ୍ଷ" ,
+"m" , "ଜ୍ଞ" ,
+"n" , "ଦ୍ଭ" ,
+"o" , "କ୍ଟ" ,
+"p" , "କ୍ଟ୍ର" ,
+"q" , "କ୍ତ" ,
+"r" , "କ୍ସ" ,
+"s" , "ଗ୍ଦ" ,
+"t" , "ଗ୍ଧ" ,
+"u" , "ଙ୍କ" ,
+"v" , "ଙ୍ଖ" ,
+"w" , "ଙ୍ଗ" ,
+"x" , "ଙ୍ଘ" ,
+"y" , "ଚ୍ଚ" ,
+"z" , "ଚ୍ଛ" ,
+
+"୍ଯ" , "୍ୟ",
+"ଅା", "ଆ" )
+
+//**********************************************
+
+    var array_one_length = array_one.length ;
+
+    var modified_substring = document.getElementById("legacy_text").value  ;	
+	
+  document.getElementById("unicode_text").value = "Conversion in progress.."  ;  
+
+//****************************************************
+//  Break the long text into small bunches of chunk_size  characters each.
+//****************************************************
+    var text_size = modified_substring.length ;
+
+    var processed_text = '' ;  //blank
+
+    var sthiti1 = 0 ;  var sthiti2 = 0 ;  var chale_chalo = 1 ;
+ 
+    var chunk_size = 6000; // this charecter long text will be processed in one go.
+
+    while ( chale_chalo == 1 ) 
+    {
+     sthiti1 = sthiti2 ;
+
+     if ( sthiti2 < ( text_size - chunk_size ) )  
+     { 
+      sthiti2 +=  chunk_size ;
+//      while (document.getElementById("legacy_text").value.charAt ( sthiti2 ) != ' ') {sthiti2--;} 
+//This was making problem if there is no 'space' in the whole document.
+     } 
+     else  { sthiti2 = text_size  ;  chale_chalo = 0 }
+
+  var modified_substring = document.getElementById("legacy_text").value.substring ( sthiti1, sthiti2 )  ;
+
+  Replace_Symbols( ) ;
+
+  var processed_text = processed_text + modified_substring ;
+	  
+document.getElementById("unicode_text").value = "Conversion in progress.." + '\n\n' + 'Conversion of ' + sthiti2 + ' charecters out of ' + text_size + ' completed.' ; 
+
+    }
+  
+document.getElementById("unicode_text").value = processed_text  ;  
+
+
+// --------------------------------------------------
+
+
+function Replace_Symbols( )
+
+{
+
+//substitute array_two elements in place of corresponding array_one elements
+
+if ( modified_substring != "" )  // if stringto be converted is non-blank then no need of any processing.
+{
+for ( input_symbol_idx = 0;   input_symbol_idx < array_one_length-1;    input_symbol_idx = input_symbol_idx + 2 )
+
+{ 
+//******************************************************
+idx = 0  ;  // index of the symbol being searched for replacement
+
+while (idx != -1 ) //while-00
+{
+
+modified_substring = modified_substring.replace( array_one[ input_symbol_idx ] , array_one[input_symbol_idx+1] )
+idx = modified_substring.indexOf( array_one[input_symbol_idx] )
+
+} // end of while-00 loop
+
+} // end of for loop
+
+// following statements for adjusting postion of e, ai, o and au maatraas.
+	
+modified_substring = modified_substring.replace( /([ù])([କଖଗଘଚଛଜଝଟଠଡଢଢ଼ଣତଥଦଧନପଫବଭମଯୟରଲବୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$1" ) ;
+
+modified_substring = modified_substring.replace( /([ù])([୍])([କଖଗଘଚଛଜଝଟଠଡଢଢ଼ଣତଥଦଧନପଫବଭମୟରଲବୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$3$1" ) ;
+
+modified_substring = modified_substring.replace( /([ù])([୍])([କଖଗଘଚଛଜଝଟଠଡଢଢ଼ଣତଥଦଧନପଫବଭମୟରଲବୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$3$1" ) ;
+
+modified_substring = modified_substring.replace( /ùø/g  ,  "ୌ" ) ;
+
+modified_substring = modified_substring.replace( /ùା/g  ,  "ୋ" ) ;
+
+modified_substring = modified_substring.replace( /ù÷/g  ,  "ୈ" ) ;
+
+modified_substring = modified_substring.replace( /ù/g  ,  "େ" ) ;
+
+//following three statement for adjusting position of reph ie, half r .
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)à/g , "ð$1$2" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)ð/g , "ð$1$2" ) ;
+
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])à/g , "ð$1$2" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])ð/g , "ð$1$2" ) ;
+
+modified_substring = modified_substring.replace( /ð/g , "ର୍" ) ;
+
+
+modified_substring = modified_substring.replace( /([ଂଁ])([ାିୀୁୂୃେୈୋୌ])/g , "$2$1" ) ;
+
+
+
+} // end of IF  statement  meant to  supress processing of  blank  string.
+
+} // end of the function  Replace_Symbols
+
+} // end of convert_to_unicode function
+</script>
+
+</head>
+
+<body bgcolor="#d0cfce">
+
+<div class=Section1>
+
+<p align=center style='text-align:center'><b><span
+style='color:blue'>Akruti Sarala - Unicode Converter </span></br>
+Copy text typed in Sarala font and paste below.</p>
+
+<p align=center ><TEXTAREA style="width:95%;height:190px" NAME="TextToConvert"
+id="legacy_text"></TEXTAREA></p>
+
+<p align=center style='text-align:center'><b>
+
+<input type=button name=converter id=converter value=" Convert to Unicode &gt; "
+accesskey=c title="Shortcut alt+c" onClick="convert_to_unicode();"></b></p>
+
+<p align=center style='text-align:center'><b>Unicode Odia text-box <br>
+<TEXTAREA style="width:95%;height:300px"  NAME="ConvertedText" id="unicode_text"></TEXTAREA><o:p></o:p></b></p>
+
+<p align='center'>Released under CC-BY-SA 3.0. Coded by <a href="http://in.linkedin.com/in/manojsahukar/" target="_blank" title="Reach to me">Manoj Sahukar</a> and <a href="http://in.linkedin.com/in/psubhashish/" target="_blank" title="Reach to me">Subhashish Panigrahi.</a> Inspired by Rebati Converter 1 (OR-TTSarala to Unicode) <o:p></o:p></span></b></p>
+
+</div>
+
+</body>
+
+</html>
