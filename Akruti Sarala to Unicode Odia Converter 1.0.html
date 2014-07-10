@@ -92,7 +92,7 @@ var array_one = new Array(
 "Ü" , "୍ନ" ,
 "Ý" , "୍ପ" ,
 "Þ" , "୍ଫ" ,
-"ß" , "୍ବ" ,
+//"ß" , "୍ୱ" ,
 
 "<" , "ଣ୍ଟ" ,
 "…" , "ଟ୍ଟ" ,
@@ -311,15 +311,17 @@ modified_substring = modified_substring.replace( /ù÷/g  ,  "ୈ" ) ;
 
 modified_substring = modified_substring.replace( /ù/g  ,  "େ" ) ;
 
-//following three statement for adjusting position of reph ie, half r .
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)à/g , "ð$1$2" ) ;
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)ð/g , "ð$1$2" ) ;
+modified_substring = modified_substring.replace( /ßð/g , "ðß" ) ;
 
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])à/g , "ð$1$2" ) ;
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])ð/g , "ð$1$2" ) ;
+//following three statement for adjusting position of reph ie, half r .
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳବଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)à/g , "ð$1$2" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳବଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)ð/g , "ð$1$2" ) ;
+
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳବଶଷସହକ୍ଷଜ୍ଞୟ])([୍])à/g , "ð$1$2" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳବଶଷସହକ୍ଷଜ୍ଞୟ])([୍])ð/g , "ð$1$2" ) ;
 
 modified_substring = modified_substring.replace( /ð/g , "ର୍" ) ;
-
+modified_substring = modified_substring.replace( /ß/g , "୍ୱ " ) ;
 
 modified_substring = modified_substring.replace( /([ଂଁ])([ାିୀୁୂୃେୈୋୌ])/g , "$2$1" ) ;
 
