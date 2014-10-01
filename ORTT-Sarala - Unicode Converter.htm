@@ -297,7 +297,7 @@ modified_substring = modified_substring.replace( /Ò/g   ,  "େ" ) ;
 modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)à/g , "à$1$2" ) ;
 modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])à/g , "à$1$2" ) ;
 modified_substring = modified_substring.replace( /à/g , "ର୍" ) ;
-modified_substring = modified_substring.replace( /([Ôଂଁ])([ାିୀୁୂୃେୈୋୌ])/g , "$2$1" ) ;
+modified_substring = modified_substring.replace( /([ଂଁ])([ାିୀୁୂୃେୈୋୌ])/g , "$2$1" ) ;
 
 // new added features
 modified_substring = modified_substring.replace( /([୧୨୩୪୫୬୭୮୯୦])([ା।])([୧୨୩୪୫୬୭୮୯୦])/g , "$1|$3" ) ; // news paper style
