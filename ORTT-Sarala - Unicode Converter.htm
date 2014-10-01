@@ -20,6 +20,7 @@ function convert_to_unicode()
 
 var array_one = new Array(
 
+"ÞÔ", "ÔÞ",
 "¼¼Ð" , " ।" ,
 "þ" , "" ,
 "Æ" , "" ,
@@ -58,7 +59,7 @@ var array_one = new Array(
 "—" , "ତ୍ସ" ,
 "˜" , "୍ଳ" ,
 "™" , "ର୍ଁ" ,
-"š" , "୍ବ" ,
+"š" , "୍ୱ" ,
 "›" , "୍ମ" ,
 "¡" , "ଭ୍ଭ" ,
 "£" , "କ୍କ" ,
@@ -132,13 +133,13 @@ var array_one = new Array(
 "y" , "ସ୍ଥ" ,
 "õ" , "୍ର" ,
 "ö" , "୍ର" ,
-"Ô" , "୍ୟ" ,
-"è" , "୍ବ" ,
+//"Ô" , "୍ୟ" , 
+"è" , "୍ୱ" ,
 "÷" , "୍ଭ" ,
 "ë" , "୍ମ" ,
 "ê" , "୍ମ" ,
 "ï" , "୍ନ" ,
-"é" , "୍ବ" , 
+"é" , "୍ୱ" , 
 "í" , "୍ଲ" ,
 "î" , "୍ଲ" , 
 "¢" , "କ୍ଲ" ,
@@ -152,6 +153,7 @@ var array_one = new Array(
 "³" , "ଜ୍ଜ" ,
 "©" , "ପ୍ତ" ,
 "\=" , "ଙ୍ଗ" ,
+" ଙ୍ଗ " , "\ = " , // Equal Sign
 "\*" , "ଙ୍କ" ,
 "\&" , "ଞ୍ଜ" ,
 "\$" , "ଫ" ,
@@ -174,7 +176,7 @@ var array_one = new Array(
 "Ü" , "ଁ" ,
 "Õ" , "ଂ" ,
 "Ó" , "ଃ" ,
-"ç" , "୍" ,
+"ç" , "୍‍" ,// halant with ZWJ
 "Ö" , "ଂ" ,
 "Ú" , "ିଁ" ,
 "Û" , "ଁ" ,
@@ -183,7 +185,7 @@ var array_one = new Array(
 "â" , "୍ଲ" ,
 "ä" , "ୁ" ,
 "å" , "ୂ" ,
-"æ" , "ୂ" ,
+"æ" , "ୂ" , //
 "ì" , "୍ଳ" ,
 "ð" , "୍ନ" ,
 "ø" , "୍ଭ" ,
@@ -203,6 +205,8 @@ var array_one = new Array(
 "K" , "ଔ" ,
 // new additions...
 "ƒ" , 'ମ୍ପ' // mpa
+//"" , "",
+//"" , ""
 
 )
 
@@ -293,9 +297,12 @@ modified_substring = modified_substring.replace( /Ò/g   ,  "େ" ) ;
 modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)à/g , "à$1$2" ) ;
 modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])à/g , "à$1$2" ) ;
 modified_substring = modified_substring.replace( /à/g , "ର୍" ) ;
-modified_substring = modified_substring.replace( /([ଂଁ])([ାିୀୁୂୃେୈୋୌ])/g , "$2$1" ) ;
+modified_substring = modified_substring.replace( /([Ôଂଁ])([ାିୀୁୂୃେୈୋୌ])/g , "$2$1" ) ;
+
 // new added features
 modified_substring = modified_substring.replace( /([୧୨୩୪୫୬୭୮୯୦])([ା।])([୧୨୩୪୫୬୭୮୯୦])/g , "$1|$3" ) ; // news paper style
+modified_substring = modified_substring.replace( /([ାିୀୁୂୃେୈୋୌ])([Ô])/g , "$2$1" ) ;
+modified_substring = modified_substring.replace( /Ô/g , "୍ୟ" ) ;
 
 } // end of IF  statement  meant to  suppress processing of  blank  string.
 
