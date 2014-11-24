@@ -6,6 +6,7 @@
 <meta name=Description content=Shreelipi - Unicode Odia Converter>
 <meta name=Author1 content=Subhashish Panigrahi>
 <meta name=Author2 content=Shitikantha Dash>
+<meta name=Author3 content=Manoj Sahukar>
 <title>Shreelipi - Unicode Odia Converter</title>
 
 <script  type="text/javascript">
@@ -179,6 +180,7 @@ var array_one = new Array(
 " æ" , "ା" , // aa kara
 "æ" , "ା" , // aa kara
 "􀃂" , "ା" , // aa kara
+" ା", " ।", // purnached
 " ç" , "ି" , // i kara
 "ÿ]" , "ିଁ" , // i kara
 "ç" , "ି" , // i kara
@@ -237,7 +239,7 @@ document.getElementById("unicode_text").value = "Conversion in progress.."  ;
 
     var cond1 = 0 ;  var cond2 = 0 ;  var chale_chalo = 1 ;
  
-    var chunk_size = 6000; // this character long text will be processed in one go.
+    var chunk_size = 6000; // this charecter long text will be processed in one go.
 
     while ( chale_chalo == 1 ) 
     {
@@ -273,7 +275,7 @@ function Replace_Symbols( )
 
 //substitute array_two elements in place of corresponding array_one elements
 
-if ( modified_substring != "" )  // if string to be converted is non-blank then no need of any processing.
+if ( modified_substring != "" )  // if stringto be converted is non-blank then no need of any processing.
 {
 for ( input_symbol_idx = 0;   input_symbol_idx < array_one_length-1;    input_symbol_idx = input_symbol_idx + 2 )
 
@@ -294,7 +296,7 @@ idx = modified_substring.indexOf( array_one[input_symbol_idx] )
 // see if the following needs to include more letters than  [କସ]
 //modified_substring = modified_substring.replace(   /([କସ])([ú])/g , "ତ୍$1" ) ;
 
-// following statements for adjusting position of e, ai, o and au maatraas.
+// following statements for adjusting postion of e, ai, o and au maatraas.
   
 modified_substring = modified_substring.replace(   /([{])([କଖଗଘଙଚଛଜଝଞଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])/g , "$2$1" ) ;
 
@@ -320,22 +322,17 @@ modified_substring = modified_substring.replace( /([ଂଁ])([ାିୀୁୂୃ
 //following three statement for adjusting position of reph and i .
 modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)}/g , "}$1$2ି" ) ;
 
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])}/g , "}$1$2ି" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])}/g , "}$1$2" ) ;
 
 modified_substring = modified_substring.replace( /}/g , "ର୍" ) ;
+modified_substring = modified_substring.replace( /ˆ/g , "ତ୍ତ" ) ;
 
 
-} // end of IF  statement  meant to  suppress processing of  blank  string.
+} // end of IF  statement  meant to  supress processing of  blank  string.
 
 } // end of the function  Replace_Symbols
 
 } // end of convert_to_unicode function
-
-function SelectAll(id)
-{
-    document.getElementById(id).focus();
-    document.getElementById(id).select();
-}
 </script>
 <!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext="edit" spidmax="1026"/>
@@ -357,15 +354,15 @@ id="legacy_text"></TEXTAREA></p>
 
 <p align=center style='text-align:center'>
 <input type=button name=converter id=converter value=" CONVERT " style="width:90px;float:center;background-color:#4AAAD1;color:#FFFFFF;font-weight:bold;margin-left:4px;padding:8px;"
-accesskey=c title="Alt + Shift + c" onClick="convert_to_unicode();"><br/><br/>
+accesskey=c title="convert" onClick="convert_to_unicode();"><br/><br/>
 <align=center style='text-align:center'><font size="3" face="sans-serif">Converted Unicode text below<br/>
 <font size="2" face="sans-serif"><span
 style='color:#606060'>You can copy and use the text below in Facebook, E-mail, blogs, websites and <a href="https://or.wikipedia.org/wiki/WP:CS">ODIA WIKIPEDIA.</a></font></span>
-<TEXTAREA ROWS="30%" COLS="110%" NAME="ConvertedText" id="unicode_text" onClick="SelectAll('unicode_text');"></TEXTAREA><o:p></o:p></p>
+<TEXTAREA ROWS="30%" COLS="110%" NAME="ConvertedText" id="unicode_text"></TEXTAREA><o:p></o:p></p>
 </form>
 
 <p align=center style='text-align:center'><span
-style='color:#515151'><font size="2">Designed by <a href="https://or.wikipedia.org/wiki/User:ଶିତିକଣ୍ଠ ଦାଶ" target="_blank" title="Reach to me">Shitikantha Dash</a> and <a href="https://meta.wikimedia.org/wiki/User:Psubhashish" target="_blank" title="Reach to me">Subhashish Panigrahi</a>. Under CC-BY-SA 3.0. Inspired by Rebati converter by Srujanika.<br/><a href="https://22bc339da9ca3e2462414546a715752e4c2c5e0d.googledrive.com/host/0B5rBGd680WZFemVLa3RxY0preE0/AkrutiUnicode" target="_blank" title="Click here"> Click here<a> for Akruti Sarala-Unicode converter.</font></span></p>
+style='color:#515151'><font size="2">Designed by <a href="https://or.wikipedia.org/wiki/User:ଶିତିକଣ୍ଠ ଦାଶ" target="_blank" title="Reach to me">Shitikantha Dash</a> and <a href="https://meta.wikimedia.org/wiki/User:Psubhashish" target="_blank" title="Reach to me">Subhashish Panigrahi</a>. Maintained by <a href="http://in.linkedin.com/in/manojsahukar/" target="_blank" title="Reach to me">Manoj Sahukar</a>. Under CC-BY-SA 3.0. Inspired by Rebati converter by Srujanika.<br/><a href="https://22bc339da9ca3e2462414546a715752e4c2c5e0d.googledrive.com/host/0B5rBGd680WZFemVLa3RxY0preE0/AkrutiUnicode" target="_blank" title="Click here"> Click here<a> for Akruti Sarala-Unicode converter.</font></span></p>
 
 
 

@@ -306,11 +306,11 @@ idx = modified_substring.indexOf( array_one[input_symbol_idx] )
 
 // following statements for adjusting position of e, ai, o and au maatraas.
 	
-modified_substring = modified_substring.replace( /([ù])([କଖଗଘଚଛଜଝଟଠଡଢଢ଼ଣତଥଦଧନପଫବଭମଯୟରଲବୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$1" ) ;
+modified_substring = modified_substring.replace( /([ù])([କଖଗଘଚଛଜଝଟଠଡଢଢ଼ଣତଥଦଧନପଫବଭମଯୟରଲୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$1" ) ;
 
-modified_substring = modified_substring.replace( /([ù])([୍])([କଖଗଘଚଛଜଝଟଠଡଢଢ଼ଣତଥଦଧନପଫବଭମୟରଲବୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$3$1" ) ;
+modified_substring = modified_substring.replace( /([ù])([୍])([କଖଗଘଚଛଜଝଟଠଡଢଢ଼ଣତଥଦଧନପଫବଭମୟରଲୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$3$1" ) ;
 
-modified_substring = modified_substring.replace( /([ù])([୍])([କଖଗଘଚଛଜଝଟଠଡଢଢ଼ଣତଥଦଧନପଫବଭମୟରଲବୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$3$1" ) ;
+modified_substring = modified_substring.replace( /([ù])([୍])([କଖଗଘଚଛଜଝଟଠଡଢଢ଼ଣତଥଦଧନପଫବଭମୟରଲୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$3$1" ) ;
 
 modified_substring = modified_substring.replace( /ùø/g  ,  "ୌ" ) ;
 
@@ -321,11 +321,11 @@ modified_substring = modified_substring.replace( /ù÷/g  ,  "ୈ" ) ;
 modified_substring = modified_substring.replace( /ù/g  ,  "େ" ) ;
 
 //following three statement for adjusting position of reph ie, half r .
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)à/g , "ð$1$2" ) ;
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)ð/g , "ð$1$2" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳୱଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)à/g , "ð$1$2" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳୱଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)ð/g , "ð$1$2" ) ;
 
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])à/g , "ð$1$2" ) ;
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])ð/g , "ð$1$2" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳୱଶଷସହକ୍ଷଜ୍ଞୟ])([୍])à/g , "ð$1$2" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳୱଶଷସହକ୍ଷଜ୍ଞୟ])([୍])ð/g , "ð$1$2" ) ;
 
 modified_substring = modified_substring.replace( /ð/g , "ର୍" ) ;
 
@@ -361,11 +361,11 @@ id="legacy_text"></TEXTAREA></p>
 
 <p align=center style='text-align:center'>
 <input type=button name=converter id=converter value=" CONVERT " style="width:90px;float:center;background-color:#4AAAD1;color:#FFFFFF;font-weight:bold;margin-left:4px;padding:8px;"
-accesskey=c title="Alt + Shift + c" onClick="convert_to_unicode();"><br/><br/>
+accesskey=c title="Alt + Shift + c" onClick="convert_to_unicode(), SelectAll('unicode_text');"><br/><br/>
 <align=center style='text-align:center'><font size="3" face="sans-serif">Converted Unicode text below<br/>
 <font size="2" face="sans-serif"><span
 style='color:#606060'>You can copy and use the text below in Facebook, E-mail, blogs, websites and <a href="https://or.wikipedia.org/wiki/WP:CS">ODIA WIKIPEDIA.</a></font></span>
-<TEXTAREA ROWS="30%" COLS="110%" NAME="ConvertedText" id="unicode_text" onClick="SelectAll('unicode_text');"></TEXTAREA><o:p></o:p></p>
+<TEXTAREA ROWS="30%" COLS="110%" NAME="ConvertedText" id="unicode_text"></TEXTAREA><o:p></o:p></p>
 </form>
 
 <p align=center style='text-align:center'><span
