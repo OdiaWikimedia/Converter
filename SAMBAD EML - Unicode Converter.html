@@ -21,7 +21,12 @@ function convert_to_unicode()
 var text_array = new Array(
 
 	//"\uE838\uE8EB","ିର୍ ",
+	"\uE823\uE8EF","ଥି",
+	"\uE825\uE8EF","ଧି",
+	"\uE814\uE8EF","ଖି",
 	"\uE98E","ୁ",
+	"\uE997","ୁ",
+	"\uE996","ୁ",
 	"\uE8F1","\uE838\uE8EB",
 	"\uE82D\uE8F6","ର‌୍ୟ",
     "\uE807" , "ଅ" , // a
@@ -430,8 +435,8 @@ modified_substring = modified_substring.replace( /\uE83Dା/g  ,  "ୋ" ) ;
 modified_substring = modified_substring.replace( /\uE83D\uE843/g  ,  "ୌ" ) ;
 modified_substring = modified_substring.replace( /\uE83D/g   ,  "େ" ) ;
 //following three statement for adjusting position of reph ie, half r .
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳୱଶଷସହକ୍ଷୟ])([ା୍ିୀୁୂୃେୈୋୌଂଁ]*)([\uE8EB])/g , "\uE8EB$1$2" ) ;
-modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳୱଶଷସହକ୍ଷୟ])([\u0B4D])([\uE8EB])/g , "\uE8EB$1" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳୱଶଷସହକ୍ଷୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)([\uE8EB])/g , "\uE8EB$1$2" ) ;
+modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳୱଶଷସହକ୍ଷୟ])([\u0B4D])([\uE8EB])/g , "\uE8EB$1୍" ) ;
 modified_substring = modified_substring.replace( /\uE8EB/g , "ର୍" ) ;
 modified_substring = modified_substring.replace( /([ଂଁ])([ାିୀୁୂୃେୈୋୌ])/g , "$2$1" ) ;
 
