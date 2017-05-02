@@ -1,0 +1,458 @@
+ଓଡ଼ିଆ ଲିପିରେ ଲିଖିତ କୌଣସି ଶବ୍ଦ/ବାକ୍ୟର ଉଚ୍ଚାରଣ ଦେଖାଇବା ପାଇଁ [[ଇଣ୍ଟରନ୍ୟାସନାଲ ଫୋନେଟିକ ଲାଙ୍ଗୁଏଜ]] (ଆଇପିଏ-IPA) ଓ ରୋମାନ/ଲାଟିନ ଅକ୍ଷର ବ୍ୟବହାର କରାଯାଏ ଫଳରେ ଅଣ-ଓଡ଼ିଆ ଲୋକେ ଓଡ଼ିଆରେ ଲିଖିତ ପାଠ ଉଚ୍ଚାରଣ କରିପାରିବେ । ଏହି କନଭର୍ଟର ବ୍ୟବହାର କରି ସେହି ରୂପାନ୍ତର କରିପାରିବେ । ଏହା ''ମୋବାଇଲ ଦେଖଣା''ରେ ହୁଏତ କାମ କରିନପାରେ । କାମ କରୁନଥିଲେ ତଳକୁ ସ୍କ୍ରୋଲ କରି "ଡେସ୍କଟପ" ଦେଖଣା ସଚଳ କରନ୍ତୁ ।
+[[File:Odia to IPA and Roman converter.gif|center|600px|link=]]
+<div id="odia-converter"></div><div style="display:none;" id="hidden-html-code">
+<script> function check_input() {
+    if (document.getElementById('input_text').value == "") {
+       alert("କନଭର୍ଟ କରିବା ଭଳି କିଛି ନାହିଁ । ବାମ ପଟ ବାକ୍ସରେ ଯାହା କନଭର୍ଟ କରିବାକୁ ଚାହାନ୍ତି ତାହା ଲେଖନ୍ତୁ ।");
+        return false;
+    }
+} </script> <!--Odia to IPA--> <script> function odia_to_ipa() {
+  check_input();
+  var convmap = new Array(
+"କ୍ଷ୍","kʰ","କ୍ଷା","kʰjaː", "କ୍ଷି","kʰi", "କ୍ଷୀ","kʰi", "କ୍ଷୁ","kʰju", 
+"କ୍ଷୂ","kʰju", "କ୍ଷେ","kʰe", "କ୍ଷୈ","kʰɵi", "କ୍ଷୋ","kʰo", "କ୍ଷୌ","kʰou","କ୍ଷୃ","kʰru", "କ୍ଷ","kʰjɵ",
+
+"କ୍","k","କା","kaː", "କି","ki", "କୀ","ki", "କୁ","ku", 
+"କୂ","ku", "କେ","ke", "କୈ","kɵi", "କୋ","ko", "କୌ","kou", "କୃ","kru",
+
+"ଖ୍","kʰ","ଖା","kʰaː", "ଖି","kʰi", "ଖୀ","kʰi", "ଖୁ","kʰu", 
+"ଖୂ","kʰu", "ଖେ","kʰe", "ଖୈ","kʰɵi", "ଖୋ","kʰo", "ଖୌ","kʰou","ଖୃ","kʰru",
+
+"ଗ୍","g","ଗା","gaː", "ଗି","gi", "ଗୀ","gi", "ଗୁ","gu", 
+"ଗୂ","gu", "ଗେ","ge", "ଗୈ","gɵi", "ଗୋ","go", "ଗୌ","gou","ଗୃ","gru",
+
+"ଘ୍","gʰ","ଘା","gʰaː", "ଘି","gʰi", "ଘୀ","gʰi", "ଘୁ","gʰu", 
+"ଘୂ","gʰu", "ଘେ","gʰe", "ଘୈ","gʰɵi", "ଘୋ","gʰo", "ଘୌ","gʰou","ଘୃ","gʰru",
+
+"ଙ୍","ŋ","ଙା","ŋaː", "ଙି","ŋi", "ଙୀ","ŋi", "ଙୁ","ŋu", 
+"ଙୂ","ŋu", "ଙେ","ŋe", "ଙୈ","ŋɵi", "ଙୋ","ŋo", "ଙୌ","ŋou","ଙୃ","ŋru",
+
+"ଚ୍","t͡ʃ","ଚା","t͡ʃaː", "ଚି","t͡ʃi", "ଚୀ","t͡ʃi", "ଚୁ","t͡ʃu", 
+"ଚୂ","t͡ʃu", "ଚେ","t͡ʃe", "ଚୈ","t͡ʃɵi", "ଚୋ","t͡ʃo", "ଚୌ","t͡ʃou","ଚୌ","t͡ʃru",
+
+"ଛ୍","t͡ʃʰ","ଛା","t͡ʃʰaː", "ଛି","t͡ʃʰi", "ଛୀ","t͡ʃʰi", "ଛୁ","t͡ʃʰu", 
+"ଛୂ","t͡ʃʰu", "ଛେ","t͡ʃʰe", "ଛୈ","t͡ʃʰɵi", "ଛୋ","t͡ʃʰo", "ଛୌ","t͡ʃʰou","ଛୃ","t͡ʃʰru",
+
+"ଜ୍","d͡ʒ","ଜା","d͡ʒaː", "ଜି","d͡ʒi", "ଜୀ","d͡ʒi", "ଜୁ","d͡ʒu", 
+"ଜୂ","d͡ʒu", "ଜେ","d͡ʒe", "ଜୈ","d͡ʒɵi", "ଜୋ","d͡ʒo", "ଜୌ","d͡ʒou","ଜୃ","d͡ʒru",
+
+"ଝ୍","d͡ʒʱ","ଝା","d͡ʒʱaː", "ଝି","d͡ʒʱi", "ଝୀ","d͡ʒʱi", "ଝୁ","d͡ʒʱu", 
+"ଝୂ","d͡ʒʱu", "ଝେ","d͡ʒʱe", "ଝୈ","d͡ʒʱɵi", "ଝୋ","d͡ʒʱo", "ଝୌ","d͡ʒʱou","ଝୃ","d͡ʒʱru",
+
+"ଞ୍","ɲ","ଞା","ɲaː", "ଞି","ɲi", "ଞୀ","ɲi", "ଞୁ","ɲu", 
+"ଞୂ","ɲu", "ଞେ","ɲe", "ଞୈ","ɲɵi", "ଞୋ","ɲo", "ଞୌ","ɲou","ଞୃ","ɲru",
+
+"ଟ୍","ʈ","ଟା","ʈaː", "ଟି","ʈi", "ଟୀ","ʈi", "ଟୁ","ʈu", 
+"ଟୂ","ʈu", "ଟେ","ʈe", "ଟୈ","ʈɵi", "ଟୋ","ʈo", "ଟୌ","ʈou","ଟୃ","ʈru",
+
+"ଠ୍","ʈʰ","ଠା","ʈʰaː", "ଠି","ʈʰi", "ଠୀ","ʈʰi", "ଠୁ","ʈʰu", 
+"ଠୂ","ʈʰu", "ଠେ","ʈʰe", "ଠୈ","ʈʰɵi", "ଠୋ","ʈʰo", "ଠୌ","ʈʰou","ଠୃ","ʈʰru",
+
+"ଡ଼୍","ɽ","ଡ଼ା","ɽaː", "ଡ଼ି","ɽi", "ଡ଼ୀ","ɽi", "ଡ଼ୁ","ɽu", 
+"ଡ଼ୂ","ɽu", "ଡ଼େ","ɽe", "ଡ଼ୈ","ɽɵi", "ଡ଼ୋ","ɽo", "ଡ଼ୌ","ɽou",
+
+"ଢ଼୍","ɽʱ","ଢ଼ା","ɽʱaː", "ଢ଼ି","ɽʱi", "ଢ଼ୀ","ɽʱi", "ଢ଼ୁ","ɽʱu", 
+"ଢ଼ୂ","ɽʱu", "ଢ଼େ","ɽʱe", "ଢ଼ୈ","ɽʱɵi", "ଢ଼ୋ","ɽʱo", "ଢ଼ୌ","ɽʱou",
+
+"ଡ୍","ɖ","ଡା","ɖaː", "ଡି","ɖi", "ଡୀ","ɖi", "ଡୁ","ɖu", 
+"ଡୂ","ɖu", "ଡେ","ɖe", "ଡୈ","ɖɵi", "ଡୋ","ɖo", "ଡୌ","ɖou","ଡୃ","ɖru",
+
+"ଢ୍","ɖʱ","ଢା","ɖʱaː", "ଢି","ɖʱi", "ଢୀ","ɖʱi", "ଢୁ","ɖʱu", 
+"ଢୂ","ɖʱu", "ଢେ","ɖʱe", "ଢୈ","ɖʱɵi", "ଢୋ","ɖʱo", "ଢୌ","ɖʱou","ଢୃ","ɖʱru",
+
+"ଣ୍","ɳ","ଣା","ɳaː", "ଣି","ɳi", "ଣୀ","ɳi", "ଣୁ","ɳu", 
+"ଣୂ","ɳu", "ଣେ","ɳe", "ଣୈ","ɳɵi", "ଣୋ","ɳo", "ଣୌ","ɳou","ଣୃ","ɳru",
+
+"ତ୍","t̪","ତା","t̪aː", "ତି","t̪i", "ତୀ","t̪i", "ତୁ","t̪u", 
+"ତୂ","t̪u", "ତେ","t̪e", "ତୈ","t̪ɵi", "ତୋ","t̪o", "ତୌ","t̪ou","ତୃ","t̪ru",
+
+"ଥ୍","t̪ʰ","ଥା","t̪ʰaː", "ଥି","t̪ʰi", "ଥୀ","t̪ʰi", "ଥୁ","t̪ʰu", 
+"ଥୂ","t̪ʰu", "ଥେ","t̪ʰe", "ଥୈ","t̪ʰɵi", "ଥୋ","t̪ʰo", "ଥୌ","t̪ʰou","ଥୃ","t̪ʰru",
+
+"ଦ୍","d̪", "ଦା","d̪aː", "ଦି","d̪i", "ଦୀ","d̪i", "ଦୁ","d̪u", 
+"ଦୂ","d̪u", "ଦେ","d̪e", "ଦୈ","d̪ɵi", "ଦୋ","d̪o", "ଦୌ", "d̪ou","ଦୃ", "d̪ru",
+
+"ଧ୍","d̪ʱ","ଧା","d̪ʱaː", "ଧି","d̪ʱi", "ଧୀ","d̪ʱi", "ଧୁ","d̪ʱu", 
+"ଧୂ","d̪ʱu", "ଧେ","d̪ʱe", "ଧୈ","d̪ʱɵi", "ଧୋ","d̪ʱo", "ଧୌ","d̪ʱou","ଧୃ","d̪ʱru",
+
+"ନ୍","n","ନା","naː", "ନି","ni", "ନୀ","ni", "ନୁ","nu", 
+"ନୂ","nu", "ନେ","ne", "ନୈ","nɵi", "ନୋ","no", "ନୌ","nou","ନୃ","nru",
+
+"ପ୍","p","ପା","paː", "ପି","pi", "ପୀ","pi", "ପୁ","pu", 
+"ପୂ","pu", "ପେ","pe", "ପୈ","pɵi", "ପୋ","po", "ପୌ","pou","ପୃ","pru",
+
+"ଫ୍","pʰ","ଫା","pʰaː", "ଫି","pʰi", "ଫୀ","pʰi", "ଫୁ","pʰu", 
+"ଫୂ","pʰu", "ଫେ","pʰe", "ଫୈ","pʰɵi", "ଫୋ","pʰo", "ଫୌ","pʰou","ଫୃ","pʰru",
+
+"ବ୍","b","ବା","baː", "ବି","bi", "ବୀ","bi", "ବୁ","bu", 
+"ବୂ","bu", "ବେ","be", "ବୈ","bɵi", "ବୋ","bo", "ବୌ","bou","ବୃ","bru",
+
+"ଭ୍","bʱ", "ଭା","bʱaː", "ଭି","bʱi", "ଭୀ","bʱi", "ଭୁ","bʱu", 
+"ଭୂ","bʱu", "ଭେ","bʱe", "ଭୈ","bʱɵi", "ଭୋ","bʱo", "ଭୌ","bʱou","ଭୃ","bʱru",
+
+"ମ୍","m","ମା","maː", "ମି","mi", "ମୀ","mi", "ମୁ","mu", 
+"ମୂ","mu", "ମେ","me", "ମୈ","mɵi", "ମୋ","mo", "ମୌ","mou","ମୃ","mru",
+
+"ଯ୍","d͡ʒ","ଯା","d͡ʒaː", "ଯି","d͡ʒi", "ଯୀ","d͡ʒi", "ଯୁ","d͡ʒu", 
+"ଯୂ","d͡ʒu", "ଯେ","d͡ʒe", "ଯୈ","d͡ʒɵi", "ଯୋ","d͡ʒo", "ଯୌ","d͡ʒou","ଯୃ","d͡ʒru",
+
+"ୟ୍","j","ୟା","jaː", "ୟି","ji", "ୟୀ","ji", "ୟୁ","ju", 
+"ୟୂ","ju", "ୟେ","je", "ୟୈ","jɵi", "ୟୋ","jo", "ୟୌ","jou","ୟୃ","jru",
+
+"ର୍","r","ରା","raː", "ରି","ri", "ରୀ","ri", "ରୁ","ru", 
+"ରୂ","ru", "ରେ","re", "ରୈ","rɵi", "ରୋ","ro", "ରୌ","rou",
+
+"ଲ୍","l","ଲା","laː", "ଲି","li", "ଲୀ","li", "ଲୁ","lu", 
+"ଲୂ","lu", "ଲେ","le", "ଲୈ","lɵi", "ଲୋ","lo", "ଲୌ","lou",
+
+"ଳ୍","l̪","ଳା","l̪aː", "ଳି","l̪i", "ଳୀ","l̪i", "ଳୁ","l̪u", 
+"ଳୂ","l̪u", "ଳେ","l̪e", "ଳୈ","l̪ɵi", "ଳୋ","l̪o", "ଳୌ","l̪ou",
+
+"ୱା","uaː", "ୱି","ui", "ୱୀ","ui", "ୱୁ","u", 
+"ୱୂ","u", "ୱେ","ue", "ୱୈ","uɵi", "ୱୋ","uo", "ୱୌ","uɵou",
+
+"ସ୍","s","ସା","saː", "ସି","si", "ସୀ","si", "ସୁ","su", 
+"ସୂ","su", "ସେ","se", "ସୈ","sɵi", "ସୋ","so", "ସୌ","sou",
+
+"ଶ୍","s","ଶା","saː", "ଶି","si", "ଶୀ","si", "ଶୁ","su", 
+"ଶୂ","su", "ଶେ","se", "ଶୈ","sɵi", "ଶୋ","so", "ଶୌ","sou",
+
+"ଷ୍","s","ଷା","saː", "ଷି","si", "ଷୀ","si", "ଷୁ","su", 
+"ଷୂ","su", "ଷେ","se", "ଷୈ","sɵi", "ଷୋ","so", "ଷୌ","sou",
+
+"ହ୍","h","ହା","haː", "ହି","hi", "ହୀ","hi", "ହୁ","hu", 
+"ହୂ","hu", "ହେ","he", "ହୈ","hɵi", "ହୋ","ho", "ହୌ","hou",
+
+  "ଅ","ɵ",
+  "ଆ","aː",
+  "ଇ","i",
+  "ଈ","i",
+  "ଉ","u",
+  "ଊ","u",
+  "ଏ","e",
+  "ଐ","ɵi",
+  "ଓ","o",
+  "ଔ","ɵu",
+  "ଋ","ru",
+  "କ","kɵ",
+  "ଖ","kʰɵ",
+  "ଗ","ɡɵ",
+  "ଘ","ɡʱɵ",
+  "ଙ","ŋɵ",
+  "ତ","t̪ɵ",
+  "ଥ","t̪ʰɵ",
+  "ଦ","d̪ɵ",
+  "ଧ","d̪ʱɵ",
+  "ନ","nɵ",
+  "ଡ","ɖɵ",
+  "ଟ","ʈɵ",
+  "ଠ","ʈʰɵ",
+  "ଢ","ɖʱɵ",
+  "ଡ଼","ɽɵ",
+  "ଢ଼","ɽʱɵ",
+  "ଣ","ɳɵ",
+  "ଚ","t͡ʃɵ",
+  "ଛ","t͡ʃʰɵ",
+  "ଜ","d͡ʒɵ",
+  "ଝ","d͡ʒʱɵ",
+  "ଞ","ɲɵ",
+  "ପ","pɵ",
+  "ଫ","pʰɵ",
+  "ବ","bɵ",
+  "ଭ","bʰɵ",
+  "ମ","mɵ",
+  "ହ","hɵ",
+  "ୟ","jɵ",
+  "ଯ","d͡ʒɵ",
+  "ର","ɾɵ",
+  "ଲ","lɵ",
+  "ଳ", "l̪ɵ",
+  "ୱ","uɵ",
+  "ସ","sɵ",
+  "ଶ","sɵ",
+  "ଷ","sɵ",
+   "ୃ","ru","ଁ","̃","ଂ","ŋ", " ।","."
+) 
+ 
+  var convmap_length = convmap.length ;
+  var modified_substring = $("#input_text").val(); 
+  var text_size = modified_substring.length ;
+  var processed_text = "" ;  
+  var position1 = 0 ;  var position2 = 0 ;  var process_queue = 1 ;
+  var chunk_size = 6000; 
+  while ( process_queue == 1 ) 
+  {
+    position1 = position2 ;
+    if ( position2 < ( text_size - chunk_size ) )  
+    { 
+      position2 +=  chunk_size ;
+      while (document.getElementById("input_text").value.charAt ( position2 ) != ' ') {position2--;} 
+    } 
+    else  { position2 = text_size  ;  process_queue = 0 }
+    var modified_substring = document.getElementById("input_text").value.substring ( position1, position2 )  ;
+    Replace_Symbols( ) ;
+    var processed_text = processed_text + modified_substring ;
+    $("#unicode_text").val("Conversion in progress.." + '\n\n' + 'Conversion of ' + position2 + ' charecters out of ' + text_size + ' completed.'); 
+  }
+  $("#unicode_text").val(processed_text);
+  function Replace_Symbols( )
+  {
+    if ( modified_substring != "" )  
+    {
+      for ( input_symbol_idx = 0;   input_symbol_idx < convmap_length-1;    input_symbol_idx = input_symbol_idx + 2 )
+      { 
+        idx = 0  ;  
+          while (idx != -1 ) 
+          {
+            modified_substring = modified_substring.replace( convmap[ input_symbol_idx ] , convmap[input_symbol_idx+1] );
+            idx = modified_substring.indexOf( convmap[input_symbol_idx] );
+          } 
+ 
+      }
+     modified_substring = modified_substring.replace(/([ù])([କଖଗଘଙଚଛଜଝଞଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯୟରଲବୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$1");
+modified_substring = modified_substring.replace(/([ù])([୍])([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥନପଫବଭମୟରଲବୱଶଷସହକ୍ଷଡ଼ଳ])/g , "$2$3$1"); modified_substring = modified_substring.replace(/ùø/g  ,  "ୌ"); modified_substring = modified_substring.replace(/ùା/g  ,  "ୋ"); modified_substring = modified_substring.replace(/ù÷/g  ,  "ୈ"); modified_substring = modified_substring.replace(/ù/g  ,  "େ"); modified_substring = modified_substring.replace(/([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)à/g , "ð$1$2"); modified_substring = modified_substring.replace(/([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)ð/g , "ð$1$2"); modified_substring = modified_substring.replace(/([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])à/g , "ð$1$2"); modified_substring = modified_substring.replace(/([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])ð/g , "ð$1$2"); modified_substring = modified_substring.replace(/ð/g , "ର୍"); modified_substring = modified_substring.replace(/([ଂଁ])([ାିୀୁୂୃେୈୋୌ])/g , "$2$1");
+    }
+  }
+} </script> <!--End of Odia_to_IPA-->
+
+<!--Odia to Roman--> <script> function odia_to_roman() {
+  check_input();
+  var convmap = new Array(
+"କ୍ଷ୍","khia","କ୍ଷା","khiā", "କ୍ଷି","khi", "କ୍ଷୀ","khi", "କ୍ଷୁ","khiu", 
+"କ୍ଷୂ","khiu", "କ୍ଷେ","khe", "କ୍ଷୈ","khai", "କ୍ଷୋ","kho", "କ୍ଷୌ","khau","କ୍ଷୃ","khru", "କ୍ଷ","khia",
+
+"କ୍","k","କା","kā", "କି","ki", "କୀ","ki", "କୁ","ku", 
+"କୂ","ku", "କେ","ke", "କୈ","kai", "କୋ","ko", "କୌ","kau", "କୃ","kru",
+
+"ଖ୍","kh","ଖା","khā", "ଖି","khi", "ଖୀ","khi", "ଖୁ","khu", 
+"ଖୂ","khu", "ଖେ","khe", "ଖୈ","khai", "ଖୋ","kho", "ଖୌ","khau","ଖୃ","khru",
+
+"ଗ୍","g","ଗା","gā", "ଗି","gi", "ଗୀ","gi", "ଗୁ","gu", 
+"ଗୂ","gu", "ଗେ","ge", "ଗୈ","gai", "ଗୋ","go", "ଗୌ","gau","ଗୃ","gru",
+
+"ଘ୍","gh","ଘା","ghā", "ଘି","ghi", "ଘୀ","ghi", "ଘୁ","ghu", 
+"ଘୂ","ghu", "ଘେ","ghe", "ଘୈ","ghai", "ଘୋ","gho", "ଘୌ","ghau","ଘୃ","ghru",
+
+"ଙ୍","ṅ","ଙା","ṅā", "ଙି","ṅi", "ଙୀ","ṅi", "ଙୁ","ṅu", 
+"ଙୂ","ṅu", "ଙେ","ṅe", "ଙୈ","ṅai", "ଙୋ","ṅo", "ଙୌ","ṅau","ଙୃ","ṅru",
+
+"ଚ୍","ch","ଚା","chā", "ଚି","chi", "ଚୀ","chi", "ଚୁ","chu", 
+"ଚୂ","chu", "ଚେ","che", "ଚୈ","chai", "ଚୋ","cho", "ଚୌ","chau","ଚୌ","chru",
+
+"ଛ୍","chh","ଛା","chhā", "ଛି","chhi", "ଛୀ","chhi", "ଛୁ","chhu", 
+"ଛୂ","chhu", "ଛେ","chhe", "ଛୈ","chhai", "ଛୋ","chho", "ଛୌ","chhau","ଛୃ","chhru",
+
+"ଜ୍","j","ଜା","jā", "ଜି","ji", "ଜୀ","ji", "ଜୁ","ju", 
+"ଜୂ","ju", "ଜେ","je", "ଜୈ","jai", "ଜୋ","jo", "ଜୌ","jau","ଜୃ","jru",
+
+"ଝ୍","jh","ଝା","jhā", "ଝି","jhi", "ଝୀ","jhi", "ଝୁ","jhu", 
+"ଝୂ","jhu", "ଝେ","jhe", "ଝୈ","jhai", "ଝୋ","jho", "ଝୌ","jhau","ଝୃ","jhru",
+
+"ଞ୍","ñ","ଞା","ñā", "ଞି","ñi", "ଞୀ","ñi", "ଞୁ","ñu", 
+"ଞୂ","ñu", "ଞେ","ñe", "ଞୈ","ñai", "ଞୋ","ño", "ଞୌ","ñau","ଞୃ","ñru",
+
+"ଟ୍","ṭ","ଟା","ṭā", "ଟି","ṭi", "ଟୀ","ṭi", "ଟୁ","ṭu", 
+"ଟୂ","ṭu", "ଟେ","ṭe", "ଟୈ","ṭai", "ଟୋ","ṭo", "ଟୌ","ṭau","ଟୃ","ṭru",
+
+"ଠ୍","ṭh","ଠା","ṭhā", "ଠି","ṭhi", "ଠୀ","ṭhi", "ଠୁ","ṭhu", 
+"ଠୂ","ṭhu", "ଠେ","ṭhe", "ଠୈ","ṭhai", "ଠୋ","ṭho", "ଠୌ","ṭhau","ଠୃ","ṭhru",
+
+"ଡ଼୍","rḍ","ଡ଼ା","rḍā", "ଡ଼ି","rḍi", "ଡ଼ୀ","rḍi", "ଡ଼ୁ","rḍu", 
+"ଡ଼ୂ","rḍu", "ଡ଼େ","rḍe", "ଡ଼ୈ","rḍai", "ଡ଼ୋ","rḍo", "ଡ଼ୌ","rḍau",
+
+"ଢ଼୍","rḍh","ଢ଼ା","rḍhā", "ଢ଼ି","rḍhi", "ଢ଼ୀ","rḍhi", "ଢ଼ୁ","rḍhu", 
+"ଢ଼ୂ","rḍhu", "ଢ଼େ","rḍhe", "ଢ଼ୈ","rḍhai", "ଢ଼ୋ","rḍho", "ଢ଼ୌ","rḍhau",
+
+"ଡ୍","ḍ","ଡା","ḍā", "ଡି","ḍi", "ଡୀ","ḍi", "ଡୁ","ḍu", 
+"ଡୂ","ḍu", "ଡେ","ḍe", "ଡୈ","ḍai", "ଡୋ","ḍo", "ଡୌ","ḍau","ଡୃ","ḍru",
+
+"ଢ୍","ḍh","ଢା","ḍhā", "ଢି","ḍhi", "ଢୀ","ḍhi", "ଢୁ","ḍhu", 
+"ଢୂ","ḍhu", "ଢେ","ḍhe", "ଢୈ","ḍhai", "ଢୋ","ḍho", "ଢୌ","ḍhau","ଢୃ","ḍhru",
+
+"ଣ୍","ṇ","ଣା","ṇā", "ଣି","ṇi", "ଣୀ","ṇi", "ଣୁ","ṇu", 
+"ଣୂ","ṇu", "ଣେ","ṇe", "ଣୈ","ṇai", "ଣୋ","ṇo", "ଣୌ","ṇau","ଣୃ","ṇru",
+
+"ତ୍","t","ତା","tā", "ତି","ti", "ତୀ","ti", "ତୁ","tu", 
+"ତୂ","tu", "ତେ","te", "ତୈ","tai", "ତୋ","to", "ତୌ","tau","ତୃ","tru",
+
+"ଥ୍","th","ଥା","thā", "ଥି","thi", "ଥୀ","thi", "ଥୁ","thu", 
+"ଥୂ","thu", "ଥେ","the", "ଥୈ","thai", "ଥୋ","tho", "ଥୌ","thau","ଥୃ","thru",
+
+"ଦ୍","d", "ଦା","dā", "ଦି","di", "ଦୀ","di", "ଦୁ","du", 
+"ଦୂ","du", "ଦେ","de", "ଦୈ","dai", "ଦୋ","do", "ଦୌ", "dau","ଦୃ", "dru",
+
+"ଧ୍","dh","ଧା","dhā", "ଧି","dhi", "ଧୀ","dhi", "ଧୁ","dhu", 
+"ଧୂ","dhu", "ଧେ","dhe", "ଧୈ","dhai", "ଧୋ","dho", "ଧୌ","dhau","ଧୃ","dhru",
+
+"ନ୍","n","ନା","nā", "ନି","ni", "ନୀ","ni", "ନୁ","nu", 
+"ନୂ","nu", "ନେ","ne", "ନୈ","nai", "ନୋ","no", "ନୌ","nau","ନୃ","nru",
+
+"ପ୍","p","ପା","pā", "ପି","pi", "ପୀ","pi", "ପୁ","pu", 
+"ପୂ","pu", "ପେ","pe", "ପୈ","pai", "ପୋ","po", "ପୌ","pau","ପୃ","pru",
+
+"ଫ୍","ph","ଫା","phā", "ଫି","phi", "ଫୀ","phi", "ଫୁ","phu", 
+"ଫୂ","phu", "ଫେ","phe", "ଫୈ","phai", "ଫୋ","pho", "ଫୌ","phau","ଫୃ","phru",
+
+"ବ୍","b","ବା","bā", "ବି","bi", "ବୀ","bi", "ବୁ","bu", 
+"ବୂ","bu", "ବେ","be", "ବୈ","bai", "ବୋ","bo", "ବୌ","bau","ବୃ","bru",
+
+"ଭ୍","bh", "ଭା","bhā", "ଭି","bhi", "ଭୀ","bhi", "ଭୁ","bhu", 
+"ଭୂ","bhu", "ଭେ","bhe", "ଭୈ","bhai", "ଭୋ","bho", "ଭୌ","bhau","ଭୃ","bhru",
+
+"ମ୍","m","ମା","mā", "ମି","mi", "ମୀ","mi", "ମୁ","mu", 
+"ମୂ","mu", "ମେ","me", "ମୈ","mai", "ମୋ","mo", "ମୌ","mau","ମୃ","mru",
+
+"ଯ୍","j","ଯା","jā", "ଯି","ji", "ଯୀ","ji", "ଯୁ","ju", 
+"ଯୂ","ju", "ଯେ","je", "ଯୈ","jai", "ଯୋ","jo", "ଯୌ","jau","ଯୃ","jru",
+
+"ୟ୍","ia","ୟା","iā", "ୟି","i", "ୟୀ","i", "ୟୁ","iu", 
+"ୟୂ","iu", "ୟେ","ie", "ୟୈ","iai", "ୟୋ","io", "ୟୌ","iau",
+
+"ର୍","r","ରା","rā", "ରି","ri", "ରୀ","ri", "ରୁ","ru", 
+"ରୂ","ru", "ରେ","re", "ରୈ","rai", "ରୋ","ro", "ରୌ","rau",
+
+"ଲ୍","l","ଲା","lā", "ଲି","li", "ଲୀ","li", "ଲୁ","lu", 
+"ଲୂ","lu", "ଲେ","le", "ଲୈ","lai", "ଲୋ","lo", "ଲୌ","lau",
+
+"ଳ୍","ḷ","ଳା","ḷā", "ଳି","ḷi", "ଳୀ","ḷi", "ଳୁ","ḷu", 
+"ଳୂ","ḷu", "ଳେ","ḷe", "ଳୈ","ḷai", "ଳୋ","ḷo", "ଳୌ","ḷau",
+
+"ୱା","uā", "ୱି","ui", "ୱୀ","ui", "ୱୁ","u", 
+"ୱୂ","u", "ୱେ","ue", "ୱୈ","uai", "ୱୋ","uo", "ୱୌ","uau",
+
+"ସ୍","s","ସା","sā", "ସି","si", "ସୀ","si", "ସୁ","su", 
+"ସୂ","su", "ସେ","se", "ସୈ","sai", "ସୋ","so", "ସୌ","sau",
+
+"ଶ୍","s","ଶା","sā", "ଶି","si", "ଶୀ","si", "ଶୁ","su", 
+"ଶୂ","su", "ଶେ","se", "ଶୈ","sai", "ଶୋ","so", "ଶୌ","sau",
+
+"ଷ୍","s","ଷା","sā", "ଷି","si", "ଷୀ","si", "ଷୁ","su", 
+"ଷୂ","su", "ଷେ","se", "ଷୈ","sai", "ଷୋ","so", "ଷୌ","sau",
+
+"ହ୍","h","ହା","hā", "ହି","hi", "ହୀ","hi", "ହୁ","hu", 
+"ହୂ","hu", "ହେ","he", "ହୈ","hai", "ହୋ","ho", "ହୌ","hau",
+
+  "ଅ","a",
+  "ଆ","ā", "ା","ā",
+  "ଇ","i", "ି","i",
+  "ଈ","i", "ୀ","i",
+  "ଉ","u", "ୁ","u",
+  "ଊ","u", "ୂ","u",
+  "ଏ","e", "େ","e",
+  "ଐ","ai", "ୈ","ai",
+  "ଓ","o", "ୋ","o",
+  "ଔ","au", "ୌ","au",
+  "ଋ","ru", "ୃ","ru",
+  "କ","ka", "କ୍","k",
+  "ଖ","kha", "ଖ୍","kh",
+  "ଗ","ga", "ଗ୍","g",
+  "ଘ","ɡha", "ଘ୍","ɡh",
+  "ଙ","ṅa", "ଙ","ṅ",
+  "ତ","ta", "ତ୍","t",
+  "ଥ","tha",  "ଥ୍","th",
+  "ଦ","da", "ଦ୍","d",
+  "ଧ","dha", "ଧ୍","dh",
+  "ନ","na", "ନ୍","n",
+  "ଡ","ḍa", "ଡ୍","ḍ",
+  "ଟ","ṭa", "ଟ୍","ṭ",
+  "ଠ","ṭha", "ଠ୍","ṭh",
+  "ଢ","ḍha", "ଢ୍","ḍh",
+  "ଡ଼","rḍa", "ଡ଼୍","rḍ",
+  "ଢ଼","rḍha", "ଢ଼୍","rḍh",
+  "ଣ","ṇa", "ଣ୍","ṇ",
+  "ଚ","cha", "ଚ୍","ch",
+  "ଛ","chha", "ଛ୍","chh",
+  "ଜ","ja", "ଜ୍","j",
+  "ଝ","jha", "ଝ୍","jh",
+  "ଞ","ña", "ଞ୍","ñ",
+  "ପ","pa", "ପ୍","p",
+  "ଫ","pha", "ଫ୍","ph",
+  "ବ","ba", "ବ୍","b",
+  "ଭ","bha", "ଭ୍","bh",
+  "ମ","ma", "ମ୍","m",
+  "ହ","ha", "ହ୍","h",
+  "ୟ","ẏa", "ୟ୍","ẏ",
+  "ଯ","ja", "ଯ୍","j",
+  "ର","ra", "ର୍","r",
+  "ଲ","la", "ଲ୍","l",
+  "ଳ", "ḷa", "ଳ୍", "ḷ",
+  "ୱ","ua",
+  "ସ","sa", "ସ୍","s",
+  "ଶ","sa", "ଶ୍","s",
+  "ଷ୍","s", "ଷ","sa",
+   "ୃ","ru","ଁ","̃","ଂ","ṁ", " ।",".",
+ ) 
+
+  var convmap_length = convmap.length ;
+  var modified_substring = $("#input_text").val(); 
+  $("#unicode_text").val("Conversion in progress..");  
+  var text_size = modified_substring.length ;
+  var processed_text = "" ;  
+  var position1 = 0 ;  var position2 = 0 ;  var process_queue = 1 ;
+  var chunk_size = 6000; 
+  while ( process_queue == 1 ) 
+  {
+    position1 = position2 ;
+    if ( position2 < ( text_size - chunk_size ) )  
+    { 
+      position2 +=  chunk_size ;
+      while (document.getElementById("input_text").value.charAt ( position2 ) != ' ') {position2--;} 
+    } 
+    else  { position2 = text_size  ;  process_queue = 0 }
+    var modified_substring = document.getElementById("input_text").value.substring ( position1, position2 );
+    Replace_Symbols( ) ;
+    var processed_text = processed_text + modified_substring;
+    $("#unicode_text").val("Conversion in progress.." + '\n\n' + 'Conversion of ' + position2 + ' charecters out of ' + text_size + ' completed.'); 
+  }
+  $("#unicode_text").val(processed_text);
+  function Replace_Symbols( )
+  {
+    if ( modified_substring != "" ) 
+    {
+      for ( input_symbol_idx = 0;   input_symbol_idx < convmap_length-1;    input_symbol_idx = input_symbol_idx + 2 )
+      { 
+        idx = 0  ;  
+        while (idx != -1 ) 
+        {
+          modified_substring = modified_substring.replace( convmap[ input_symbol_idx ] , convmap[input_symbol_idx+1] )
+          idx = modified_substring.indexOf( convmap[input_symbol_idx] )
+        } 
+      }
+      modified_substring = modified_substring.replace(   /([{])([କଖଗଘଙଚଛଜଝଞଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳବଶଷସହକ୍ଷଜ୍ଞୟ])/g , "$2$1" ) ;
+      modified_substring = modified_substring.replace( /([{])([୍])([କଖଗଘଙଚଛଜଝଞଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳବଶଷସହକ୍ଷଜ୍ଞୟ])/g , "$2$3$1" ) ;
+      modified_substring = modified_substring.replace( /([{])([୍])([କଖଗଘଙଚଛଜଝଞଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳବଶଷସହକ୍ଷଜ୍ଞୟ])/g , "$2$3$1" ) ;
+      modified_substring = modified_substring.replace( /{ð/g  ,  "ୈ" ) ;
+      modified_substring = modified_substring.replace( /{ା/g  ,  "ୋ" ) ;
+      modified_substring = modified_substring.replace( /{ò/g  ,  "ୌ" ) ;
+      modified_substring = modified_substring.replace( /{/g   ,  "େ" ) ;
+      modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)ö/g , "ö$1$2" ) ;
+      modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])ö/g , "ö$1$2" ) ;
+      modified_substring = modified_substring.replace( /ö/g , "ର୍" ) ;
+      modified_substring = modified_substring.replace( /([ଂଁ])([ାିୀୁୂୃେୈୋୌ])/g , "$2$1" ) ;
+      modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([ାିୀୁୂୃେୈୋୌଂଁ]*)}/g , "}$1$2ି" ) ;
+      modified_substring = modified_substring.replace( /([କଖଗଘଚଛଜଝଟଠଡଡ଼ଢଢ଼ଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହକ୍ଷଜ୍ଞୟ])([୍])}/g , "}$1$2" ) ;
+      modified_substring = modified_substring.replace( /}/g , "ର୍" ) ;
+      modified_substring = modified_substring.replace( /ˆ/g , "ତ୍ତ" ) ;
+    }
+  }
+} </script> <!--End of Odia_to_Roman--> <script> function select_and_copy() {
+  if (document.getElementById('unicode_text').value == "") {
+      alert('Oops...There is nothing to copy. Please select the conversion buttons first.')
+   } else {
+    document.getElementById('unicode_text').select();
+    document.execCommand('copy');
+    document.getElementById('unicode_text_button').value = "Copied";
+    setTimeout(function(){
+      document.getElementById('unicode_text_button').value = "Click to select all and copy";
+    }, 2000);
+  }
+} </script> <style type="text/css"> .input {height: 500px;width: 49.5%;	border: 1px solid #ccc;margin-top: 15px;	align:left;box-sizing: border-box;} input.bigbutton {margin-top: 10px;	background: #3E9CFF; padding: 8px 14px 10px; border:1px solid #3e9cbf; 	cursor:pointer;	font-size:1.0em;font-family:Arial, Times New Roman, sans-serif; letter-spacing:.1em;text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); color: #fff; -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;		box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;-moz-border-radius: 5px;-webkit-border-radius: 10px;border-radius: 2px;} input.bigbutton:hover, input.bigbutton:focus {	color:#dfe7ea;-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;}#ipa, #gist {width: 18%;}#roman, #apranta {	width: 18%;}#sambad_eml {width: 18%;}#unicode_text_button {49.5% !important;float:right;} </style> <input class="bigbutton" title="IPAରେ ରୂପାନ୍ତର ପାଇଁ କ୍ଲିକ କରନ୍ତୁ" onclick="odia_to_ipa()" type="submit" id="ipa" value="IPA ପାଇଁ କ୍ଲିକକରନ୍ତୁ" /> <input class="bigbutton" title="ରୋମାନ ଅକ୍ଷରରେ ରୂପାନ୍ତର ପାଇଁ କ୍ଲିକ କରନ୍ତୁ" onclick="odia_to_roman()" type="submit" id="roman" value="Roman ପାଇଁ କ୍ଲିକକରନ୍ତୁ" /> <input title="Click to select all and copy" onclick="select_and_copy()" class="bigbutton" type="submit" value="Click to select all and copy" id="unicode_text_button" style="width:49.5%;"/> <textarea class="input" placeholder="ଏଠି ଓଡ଼ିଆ ଶବ୍ଦ/ବାକ୍ୟ ଲେଖି ଯେଉଁଠି ଦରକାର ସେହି ଉପର ବଟନରେ କ୍ଲିକ କରନ୍ତୁ ।" id="input_text" style="float:left"></textarea> <textarea class="input" placeholder="ରୂପାନ୍ତରିତ ଶବ୍ଦ" id="unicode_text" style="float:right"></textarea>
+</div>
+
+{{clear}}
+== ଆଧାର ==
+* ଏହା [[:en:Help:IPA for Odia|IPA for Odia]] ଓ [[wikt:or:ଉଇକିଅଭିଧାନ:ରୋମାନ ଟ୍ରାନ୍ସଲିଟରେସନ|"ଉଇକିଅଭିଧାନ - ରୋମାନ ଟ୍ରାନ୍ସଲିଟରେସନ"]] ଆଧାରରେ ତିଆରି ।
+
+== ପରିଚାଳନା ==
+* [[ବ୍ୟବହାରକାରୀ:Prateek Pattanaik|ପ୍ରତୀକ ପଟ୍ଟନାୟକ]] ଓ [[ବ୍ୟବହାରକାରୀ:Psubhashish|ସୁଭାସିସ ପାଣିଘରି]]
+* ଏହା [[ଉଇକିପିଡ଼ିଆ:କନଭର୍ଟର|ମୂଳ କୋଡ଼]] ([[ବ୍ୟବହାରକାରୀ:Jnanaranjan sahu|ଜ୍ଞାନ ରଞ୍ଜନ ସାହୁ]], [[ବ୍ୟବହାରକାରୀ:ଶିତିକଣ୍ଠ ଦାଶ|ଶିତିକଣ୍ଠ ଦାଶ]], [[ବ୍ୟବହାରକାରୀ:TWO^0|ମନୋଜ ସାହୁକାର]] ଓ [[ବ୍ୟବହାରକାରୀ:Psubhashish|ସୁଭାସିସଙ୍କ]] ଦେଇ ତିଆରି)ରୁ କିଛି ବଦଳାଇ ତିଆରି କରାଯାଇଛି ।
