@@ -14,7 +14,7 @@ Steps to use:
 
 6. If you find any mistakes please comment here or mail to: odiawiki@gmail.com
 
-# International Phonetic Alphabet (IPA) and Roman/Latin converter:
+# [International Phonetic Alphabet (IPA) and Roman/Latin converter](/IPA-Romanization):
 ![How to use the converter](https://upload.wikimedia.org/wikipedia/commons/c/c2/Odia_to_IPA_and_Roman_converter.gif)
 * [Online converter](https://or.wikipedia.org/s/14jj)
 * [Source code](https://github.com/OdiaWikimedia/converter/blob/master/IPA%20and%20Roman)
